@@ -1,0 +1,117 @@
+osma@osma:~/ot_viikko1/files$ git log --stat|cat
+commit 243719b251e1e75aa68c9d223e4cb181bb2eef44
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:50:06 2020 +0200
+
+    add file22
+
+ files/file22 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 10737a8b47d4ca96dc9569297d763470a54d83d6
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:49:56 2020 +0200
+
+    final
+
+ files/file1 | 0
+ files/file2 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit e1be11bf298b75a0188abc34405be622a6c1ab9b
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:48:52 2020 +0200
+
+    make files
+
+ files/file1 | 0
+ files/file2 | 0
+ files/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 8627c6964bfcf835a4d6779e93af55d4da21a7ae
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:45:20 2020 +0200
+
+    stuff
+
+ eka.txt      |  1 -
+ kolmas.txt   |  1 +
+ tiedosto.txt | 10 ----------
+ 3 files changed, 1 insertion(+), 11 deletions(-)
+
+commit 8c953c88004d4d16debe5faea02a3163eb29964e
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:44:22 2020 +0200
+
+    move one del one
+
+ eka.txt    | 10 ++++++++++
+ toinen.txt |  0
+ 2 files changed, 10 insertions(+)
+
+commit d32bb39bddb5a2bc78b2ca9ac235fae78eef531c
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:43:38 2020 +0200
+
+    delete test
+
+ tiedosto.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 0ed47b7e92da8bb0d78b37b45e6f2a9e35961004
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:43:20 2020 +0200
+
+    add text
+
+ tiedosto.txt | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+commit ef265d4bf51ac289dc473645e78a17981da356fe
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:42:44 2020 +0200
+
+    add stuff
+
+ stuff/jokin_tiedosto | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 17c2d35517b6c55f80f93839701d21d3fb8187eb
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:42:19 2020 +0200
+
+    joo
+
+ kolmas.txt | 0
+ toinen.txt | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6a31b19f01653592f6d6a8dec597ce51dac42a4f
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:42:10 2020 +0200
+
+    joojoo
+
+ toinen.tct | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 13f9a6106b420db83d66a0fd013d351011924cbe
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:41:19 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.tct   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 3985d5db10542987448a9821dca625ac4ece7a80
+Author: osma <okovaskainen@evo.paivola.fi>
+Date:   Tue Nov 3 21:40:18 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
