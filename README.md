@@ -16,4 +16,4 @@ tämä teksti sisältää <b>lihavoituja</b> ja <em>kursivoituja</em> osuuksia, 
 
 ## Kurssiprojekti
 [määrittelydokumentti](dokumentaatio/maaritteludokumentti.md)
-[tuntikirjanpito](dokumentaatio/kirjanpito.txt)
+[tuntikirjanpito](dokumentaatio/tuntikirjanpito.txt)
