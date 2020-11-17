@@ -1,18 +1,16 @@
-<h1>Meitsimandariinin readme tiedosto</h1>
-<h2>Laskari keissit</h2>
-<h3> ensimmäinen viikko :) </h3>
+<h1>Sana peli apustaja ohjelma</h1>
 
-tämä teksti sisältää <b>lihavoituja</b> ja <em>kursivoituja</em> osuuksia, ebin
+## Käyttöohjeet
+ohjelman käynnistys
+```
+python -m pipenv start
+```
+tällä hetkellä ohjelma tulostaa pituusjärjestyksessä kaikki sanat jotka voi tehdä kirjaimista n,o,r,s,u. tätä voi muuttaa muuttamalla index.py tiedoston riviä 8
 
-
-[gitlog.txt](laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](laskarit/viikko1/komentorivi.txt)
-
-### Viikko 2 laskari tehtävät
-
-[paina tätä nappia niin näät hienosti toteutettuja testejä](laskarit/viikko2/)
-
+ohjelman testaus
+```
+python -m pipenv test
+```
 
 ## Kurssiprojekti
 [määrittelydokumentti](dokumentaatio/maaritteludokumentti.md)

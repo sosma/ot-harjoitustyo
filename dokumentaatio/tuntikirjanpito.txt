@@ -1,1 +1,2 @@
 10.11.2020: 1h. Projektin ideointi ja määritttelydokumentin kirjoittaminen
+17.11.2020: 2h. Projektin ohjelmoinnin aloittaminen. tiedostojen lukeminen, sanapalan sanojen haku, ensimmäiset testit
