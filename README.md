@@ -14,4 +14,5 @@ python -m pipenv test
 
 ## Kurssiprojekti
 [määrittelydokumentti](dokumentaatio/maaritteludokumentti.md)
+
 [tuntikirjanpito](dokumentaatio/tuntikirjanpito.txt)
