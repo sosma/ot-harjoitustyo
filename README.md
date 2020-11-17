@@ -3,13 +3,13 @@
 ## Käyttöohjeet
 ohjelman käynnistys
 ```
-python -m pipenv start
+python3 -m pipenv start
 ```
 tällä hetkellä ohjelma tulostaa pituusjärjestyksessä kaikki sanat jotka voi tehdä kirjaimista n,o,r,s,u. tätä voi muuttaa muuttamalla index.py tiedoston riviä 8
 
 ohjelman testaus
 ```
-python -m pipenv test
+python3 -m pipenv test
 ```
 
 ## Kurssiprojekti
