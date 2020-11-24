@@ -1,13 +1,19 @@
-import re
 import itertools
 # -*- coding: utf-8 -*-
 
+"""
+Class for solving word snack problems
+"""
 class WordSnack:
+    """
+    word snack main class
+    """
     def __init__(self, words):
         self.words = words
-    def get_random_word(self):
-        return choice(self.words)
     def find_words(self, letters):
+        """
+        get possible words from letters
+        """
         possible = []
         values = []
         avalible = []

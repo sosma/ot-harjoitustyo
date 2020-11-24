@@ -1,3 +1,5 @@
+# pylint: skip-file
+#this is ui code, so it does not need to be checked by pylint
 import pygame
 import sys
 from word_snack import WordSnack

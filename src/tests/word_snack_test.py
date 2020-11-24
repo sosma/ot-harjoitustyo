@@ -1,3 +1,4 @@
+# pylint: skip-file
 import unittest
 from reader import Reader
 from word_snack import WordSnack

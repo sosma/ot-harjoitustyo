@@ -5,7 +5,7 @@ ohjelman käynnistys
 ```
 python3 -m pipenv start
 ```
-tällä hetkellä ohjelma tulostaa pituusjärjestyksessä kaikki sanat jotka voi tehdä kirjaimista n,o,r,s,u. tätä voi muuttaa muuttamalla index.py tiedoston riviä 8
+ohjelmasta pääsee koittamaan sanojenhakuohjelmaa painamalla word snack nappia. tämän jälkeen kun painaa näytöltä ja alkaa kirjoittamaan tulee kirjoitettu merkkijono näytölle. Kun on kirjoittanut haluamansa kirjaimet näytölle, painamalla enter näppäintä hakee ohjelma sanat. Uuden merkkijonon kirjoittamisen voi aloittaa painamalla hiirellä näytöstä. Vasemmassa yläkulmassa olevasta napista pääsee takaisin menu näkemään. Jos yrittää hakea yli kuudella kirjaimella merkkijonoja, voi suoritusaika olla todella pitkä, meidän onneksi sanapala-peliä varten ei tarvitse hakea tätä pidempiä merkkijonoja
 
 ohjelman testaus
 ```
