@@ -29,6 +29,7 @@ class UI:
         bigfont = pygame.font.SysFont('Corbel',60)
         quit_button = smallfont.render('quit' , True , color)
         word_snack_button = smallfont.render('word snack' , True , color)
+        hangman_button = smallfont.render('hangman' , True , color)
         title = bigfont.render('word game helper' , True , color)
         running = True
         while running:
@@ -46,11 +47,18 @@ class UI:
                 """
                 word snack button pressed
                 """
-                if width/2 <= mouse[0] <= width/2+300 and height/2-300 <= mouse[1] <= height/2:
+                if width/2 <= mouse[0] <= width/2+300 and height/2-100 <= mouse[1] <= height/2-60:
                     pygame.quit()
                     self.display_word_snack()
+                    return 0
 
-
+                """
+                hangman snack button pressed
+                """
+                if width/2 <= mouse[0] <= width/2+300 and height/2-200 <= mouse[1] <= height/2-160:
+                    pygame.quit()
+                    self.display_hangman()
+                    return 0
           mouse = pygame.mouse.get_pos()
           screen.fill(0)
           """
@@ -65,12 +73,24 @@ class UI:
           """
           draw word snack button
           """
-          if width/2 <= mouse[0] <= width/2+300 and height/2-300 <= mouse[1] <= height/2:
+          if width/2 <= mouse[0] <= width/2+300 and height/2-100 <= mouse[1] <= height/2-60:
               pygame.draw.rect(screen,color_light,[width/2,height/2-100,300,40])
 
           else:
               pygame.draw.rect(screen,color_dark,[width/2,height/2-100,300,40])
           screen.blit(word_snack_button , (width/2+50,height/2-100))
+
+
+          """
+          draw hangman button
+          """
+          if width/2 <= mouse[0] <= width/2+300 and height/2-200 <= mouse[1] <= height/2-160:
+              pygame.draw.rect(screen,color_light,[width/2,height/2-200,300,40])
+
+          else:
+              pygame.draw.rect(screen,color_dark,[width/2,height/2-200,300,40])
+          screen.blit(hangman_button , (width/2+50,height/2-200))
+
 
           """
           draw helper and title
@@ -116,10 +136,15 @@ class UI:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
+
+                """
+                return to menu button clicked
+                """
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if 0 <= mouse[0] <= 300 and 0 <= mouse[1] <= 40:
                         pygame.quit()
                         self.display_menu()
+                        return 0
                     input_active = True
                     text = ""
                 if event.type == pygame.KEYDOWN and input_active:
@@ -151,3 +176,5 @@ class UI:
                     i+=40
             pygame.display.flip()
             clock.tick(30)
+    def display_hangman(self):
+        pass

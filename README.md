@@ -12,7 +12,14 @@ ohjelman testaus
 python3 -m pipenv test
 ```
 
+ohjelman koodin laadun tarkastus
+```
+python3 -m pipenv lint
+```
+
 ## Kurssiprojekti
 [määrittelydokumentti](dokumentaatio/maaritteludokumentti.md)
+
+[arkkitehtuuri](dokumentaatio/arkkitehtuuri.md)
 
 [tuntikirjanpito](dokumentaatio/tuntikirjanpito.txt)
