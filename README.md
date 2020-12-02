@@ -1,9 +1,17 @@
 <h1>Sana peli apustaja ohjelma</h1>
 
+## Ohjelman alustus
+pipenv asentaa tällä tarvittavat kirjastot, tämä pitää ajaa vain kerran
+```
+python3 -m pipenv install
+```
+
+
 ## Käyttöohjeet
+
 ohjelman käynnistys
 ```
-python3 -m pipenv start
+python3 -m pipenv run start
 ```
 ohjelmassa valitaan aluksi mitä tietokantaa käytetään tekstipohjaisella käyttöliittymällä. käyttäjä voi valita joko "src/resources/sanat.txt" joka sisältää suomenkieliset sanat tai "src/resources/words.txt" joka sisältää englanninkieliset sanat. käyttäjä voi myös käyttää mitä tahansa haluamaansa sanastoa, missä on yksi sana per rivi, tällöin kirjoitat tähän vaan polun sanatiedostoosi.
 
@@ -14,12 +22,12 @@ ohjelmasta pääsee koittamaan sanojenhakuohjelmaa painamalla word snack nappia.
 
 ohjelman testaus
 ```
-python3 -m pipenv test
+python3 -m pipenv run test
 ```
 
 ohjelman koodin laadun tarkastus
 ```
-python3 -m pipenv lint
+python3 -m pipenv run lint
 ```
 
 ## Kurssiprojekti
