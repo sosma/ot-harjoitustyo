@@ -1,5 +1,6 @@
 10.11.2020: 1h. Projektin ideointi ja määritttelydokumentin kirjoittaminen
 17.11.2020: 2h. Projektin ohjelmoinnin aloittaminen. tiedostojen lukeminen, sanapalan sanojen haku, ensimmäiset testit
 24.11.2020: 6h. käyttöliittymän ohjelmointia ja dokumentointia
-1.12.2020: 2h. Dokumentointia ja tulevan ihmettelyä  
-yhteensä 9h
+1.12.2020: 2h. Dokumentointia ja tulevan ihmettelyä
+1.12.2020: 1h. Sanaston valinta ja sanojne lisäys toimintojen toteutus
+yhteensä 12h
