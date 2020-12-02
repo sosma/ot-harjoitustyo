@@ -7,8 +7,9 @@ from reader import Reader
 
 
 class UI:
-    def __init__(self, res=(1280,800)):
+    def __init__(self, res=(1280,800), path="src/resources/sanat.txt"):
         self.res = res
+        self.path = path
     def display_menu(self):
         pygame.init()
         clock = pygame.time.Clock()
@@ -107,7 +108,7 @@ class UI:
         initilize game logic objects
         """
         reader = Reader()
-        words = reader.read_from_file("src/resources/sanat.txt") #TODO : make this not hardcoded
+        words = reader.read_from_file(self.path)
         found_words = None
         word_snack = WordSnack(words)
         pygame.init()

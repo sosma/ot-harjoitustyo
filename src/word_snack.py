@@ -26,5 +26,7 @@ class WordSnack:
                 if word in i:
                     avalible.append(word)
         for word in list(set(avalible)):
+            if len(word) <= 1:
+                continue
             possible.append(word)
         return sorted(possible, key=len)
