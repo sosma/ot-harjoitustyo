@@ -1,10 +1,10 @@
 from ui import UI
 from reader import Reader
 
-RESOURCE = input("please give the RESOURCE file you wish to use:" +\
-" (default file src/RESOURCEs/sanat.txt) ")
+RESOURCE = input("please give the resource file you wish to use:" +\
+" (default file src/resource/sanat.txt) ")
 if RESOURCE == "":
-    RESOURCE = "src/RESOURCEs/sanat.txt"
+    RESOURCE = "src/resources/sanat.txt"
 add_word = input("if you wish to add a word to the data file please"+ \
 "input it now. press enter to continue: ")
 if add_word != "":
