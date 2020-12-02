@@ -21,5 +21,5 @@ class Reader:
         """
         write a new word to a file
         """
-        with open(path_to_file, 'a') as f:
-            f.write(word+"\n")
+        with open(path_to_file, 'a') as source:
+            source.write(word+"\n")
