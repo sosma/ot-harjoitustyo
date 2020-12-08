@@ -283,7 +283,7 @@ class UI:
             """
             draw reset button
             """
-            self.displayButton([width-300, 0], [300, 40], returnToMenuButton, screen, mouse)
+            self.displayButton([width-300, 0], [300, 40], resetButton, screen, mouse)
 
 
             """
@@ -323,10 +323,10 @@ class UI:
                     not done in create button method because these buttons behafe differently
                     """
                     if i <= mouse[0] <= i+40 and height/2 <= mouse[1] <= height/2+40 and letter == "_":
-                        pygame.draw.rect(screen,colorLight,[i,height/2,40,40])
+                        pygame.draw.rect(screen,self.colorLight,[i,height/2,40,40])
 
                     else:
-                        pygame.draw.rect(screen,colorDark,[i,height/2,40,40])
+                        pygame.draw.rect(screen,self.colorDark,[i,height/2,40,40])
                     input_text = bigfont.render(letter, True, (255, 0, 0))
                     screen.blit(input_text, (i, height/2))
                     i+=60
