@@ -12,29 +12,33 @@ class UI:
     def __init__(self, res=(1280,800), path="src/resources/sanat.txt"):
         self.res = res
         self.path = path
-    def display_menu(self):
+        self.color = (255,0,0)
+        self.colorLight = (170,170,170)
+        self.colorDark = (100,100,100)
+    def displayButton(self, position, size, renderObject, screen, mouse):
+        if position[0] <= mouse[0] <= position[0]+size[0] and position[1] <= mouse[1] <= position[1] + size[1]:
+            pygame.draw.rect(screen,self.colorLight,[position[0],position[1],size[0],size[1]])
+
+        else:
+            pygame.draw.rect(screen,self.colorDark,[position[0],position[1],size[0],size[1]])
+        screen.blit(renderObject, (position[0]+size[0]/3,position[1]))
+
+    def displayMenu(self):
         pygame.init()
         clock = pygame.time.Clock()
         screen = pygame.display.set_mode(self.res)
         width, height = screen.get_width(), screen.get_height()
-        """
-        colors
-        """
-        color = (255,0,0)
-        colorLight = (170,170,170)
-        colorDark = (100,100,100)
-
 
         helper_image = pygame.image.load("src/resources/apustaja.png")
         helper_rect = helper_image.get_rect()
 
         smallfont = pygame.font.SysFont('Corbel',35)
         bigfont = pygame.font.SysFont('Corbel',60)
-        quitButton = smallfont.render('quit' , True , color)
-        wordSnackButton = smallfont.render('word snack' , True , color)
-        hangmanButton = smallfont.render('hangman' , True , color)
-        addWordBbutton = smallfont.render('add word' , True , color)
-        title = bigfont.render('word game helper' , True , color)
+        quitButton = smallfont.render('quit' , True , self.color)
+        wordSnackButton = smallfont.render('word snack' , True , self.color)
+        hangmanButton = smallfont.render('hangman' , True , self.color)
+        addWordBbutton = smallfont.render('add word' , True , self.color)
+        title = bigfont.render('word game helper' , True , self.color)
         running = True
         while running:
           for event in pygame.event.get():
@@ -76,43 +80,23 @@ class UI:
           """
           draw quit button
           """
-          if width/2 <= mouse[0] <= width/2+300 and height/2 <= mouse[1] <= height/2+40:
-              pygame.draw.rect(screen,colorLight,[width/2,height/2,300,40])
+          self.displayButton([width/2, height/2], [300, 40], quitButton, screen, mouse)
 
-          else:
-              pygame.draw.rect(screen,colorDark,[width/2,height/2,300,40])
-          screen.blit(quitButton, (width/2+50,height/2))
           """
           draw word snack button
           """
-          if width/2 <= mouse[0] <= width/2+300 and height/2-100 <= mouse[1] <= height/2-60:
-              pygame.draw.rect(screen,colorLight,[width/2,height/2-100,300,40])
-
-          else:
-              pygame.draw.rect(screen,colorDark,[width/2,height/2-100,300,40])
-          screen.blit(wordSnackButton , (width/2+50,height/2-100))
+          self.displayButton([width/2, height/2-100], [300, 40], wordSnackButton, screen, mouse)
 
 
           """
           draw hangman button
           """
-          if width/2 <= mouse[0] <= width/2+300 and height/2-200 <= mouse[1] <= height/2-160:
-              pygame.draw.rect(screen,colorLight,[width/2,height/2-200,300,40])
-
-          else:
-              pygame.draw.rect(screen,colorDark,[width/2,height/2-200,300,40])
-          screen.blit(hangmanButton , (width/2+50,height/2-200))
+          self.displayButton([width/2, height/2-200], [300, 40], hangmanButton, screen, mouse)
 
           """
           draw edit database button
           """
-          if width/2 <= mouse[0] <= width/2+300 and height/2+100 <= mouse[1] <= height/2+160:
-              pygame.draw.rect(screen,colorLight,[width/2,height/2+100,300,40])
-
-          else:
-              pygame.draw.rect(screen,colorDark,[width/2,height/2+100,300,40])
-          screen.blit(addWordBbutton , (width/2+50,height/2+100))
-
+          self.displayButton([width/2, height/2+100], [300, 40], addWordBbutton, screen, mouse)
 
           """
           draw helper and title
@@ -137,20 +121,13 @@ class UI:
         screen = pygame.display.set_mode(self.res)
         width, height = screen.get_width(), screen.get_height()
 
-        """
-        colors
-        """
-        color = (255,0,0)
-        colorLight = (170,170,170)
-        colorDark = (100,100,100)
-
 
         """
         return button
         """
         smallfont = pygame.font.SysFont('Corbel',35)
         bigfont = pygame.font.SysFont('Corbel',60)
-        returnToMenuButton = smallfont.render('return to menu' , True , color)
+        returnToMenuButton = smallfont.render('return to menu' , True , self.color)
         text =""
         running = True
         inputActive = True
@@ -165,7 +142,7 @@ class UI:
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if 0 <= mouse[0] <= 300 and 0 <= mouse[1] <= 40:
                         pygame.quit()
-                        self.display_menu()
+                        self.displayMenu()
                         return 0
                     inputActive = True
                     text = ""
@@ -180,12 +157,12 @@ class UI:
             mouse = pygame.mouse.get_pos()
 
             screen.fill(0)
-            if 0 <= mouse[0] <= 300 and 0 <= mouse[1] <= 40:
-                pygame.draw.rect(screen,colorLight,[0,0,300,40])
 
-            else:
-                pygame.draw.rect(screen,colorDark,[0,0,300,40])
-            screen.blit(returnToMenuButton , (0,0))
+            """
+            render text
+            """
+            self.displayButton([0, 0], [300, 40], returnToMenuButton, screen, mouse)
+
             input_text = bigfont.render(text, True, (255, 0, 0))
             screen.blit(input_text, (width/2, 10))
             if not inputActive:
@@ -215,12 +192,6 @@ class UI:
         screen = pygame.display.set_mode(self.res)
         width, height = screen.get_width(), screen.get_height()
 
-        """
-        colors
-        """
-        color = (255,0,0)
-        colorLight = (170,170,170)
-        colorDark = (100,100,100)
 
 
         """
@@ -228,9 +199,9 @@ class UI:
         """
         smallfont = pygame.font.SysFont('Corbel',35)
         bigfont = pygame.font.SysFont('Corbel',60)
-        returnToMenuButton = smallfont.render('return to menu' , True , color)
-        resetButton = smallfont.render('reset' , True , color)
-        numberOfLetters = smallfont.render('how many letters?' , True , color)
+        returnToMenuButton = smallfont.render('return to menu' , True , self.color)
+        resetButton = smallfont.render('reset' , True , self.color)
+        numberOfLetters = smallfont.render('how many letters?' , True , self.color)
         gameState = None
         running = True
         lettercount = None
@@ -253,7 +224,7 @@ class UI:
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if 0 <= mouse[0] <= 300 and 0 <= mouse[1] <= 40:
                         pygame.quit()
-                        self.display_menu()
+                        self.displayMenu()
                         return 0
                 """
                 rest game when reset button clicked
@@ -306,22 +277,14 @@ class UI:
             """
             draw menu button
             """
-            if 0 <= mouse[0] <= 300 and 0 <= mouse[1] <= 40:
-                pygame.draw.rect(screen,colorLight,[0,0,300,40])
+            self.displayButton([0, 0], [300, 40], returnToMenuButton, screen, mouse)
 
-            else:
-                pygame.draw.rect(screen,colorDark,[0,0,300,40])
-            screen.blit(returnToMenuButton , (0,0))
 
             """
             draw reset button
             """
-            if width-300 <= mouse[0] <= width and 0 <= mouse[1] <= 40:
-                pygame.draw.rect(screen,colorLight,[width-300,0,300,40])
+            self.displayButton([width-300, 0], [300, 40], returnToMenuButton, screen, mouse)
 
-            else:
-                pygame.draw.rect(screen,colorDark,[width-300,0,300,40])
-            screen.blit(resetButton , (width-300,0))
 
             """
             draw how many letters if lettercount not given
@@ -356,6 +319,9 @@ class UI:
                 """
                 i = 100
                 for letter in gameState:
+                    """
+                    not done in create button method because these buttons behafe differently
+                    """
                     if i <= mouse[0] <= i+40 and height/2 <= mouse[1] <= height/2+40 and letter == "_":
                         pygame.draw.rect(screen,colorLight,[i,height/2,40,40])
 
@@ -374,17 +340,11 @@ class UI:
         screen = pygame.display.set_mode(self.res)
         width, height = screen.get_width(), screen.get_height()
         reader = Reader()
-        """
-        colors
-        """
-        color = (255,0,0)
-        colorLight = (170,170,170)
-        colorDark = (100,100,100)
 
 
         smallfont = pygame.font.SysFont('Corbel',35)
         bigfont = pygame.font.SysFont('Corbel',60)
-        returnToMenuButton = smallfont.render('return to menu' , True , color)
+        returnToMenuButton = smallfont.render('return to menu' , True , self.color)
 
         text = ""
         lastAdded = ""
@@ -400,7 +360,7 @@ class UI:
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if 0 <= mouse[0] <= 300 and 0 <= mouse[1] <= 40:
                         pygame.quit()
-                        self.display_menu()
+                        self.displayMenu()
                         return 0
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
@@ -425,12 +385,7 @@ class UI:
           """
           draw menu button
           """
-          if 0 <= mouse[0] <= 300 and 0 <= mouse[1] <= 40:
-              pygame.draw.rect(screen,colorLight,[0,0,300,40])
-
-          else:
-              pygame.draw.rect(screen,colorDark,[0,0,300,40])
-          screen.blit(returnToMenuButton , (0,0))
+          self.displayButton([0, 0], [300, 40], returnToMenuButton, screen, mouse)
 
 
           """

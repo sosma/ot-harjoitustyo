@@ -8,4 +8,4 @@ RESOURCE = input("please give the resource file you wish to use:" +\
 if RESOURCE == "":
     RESOURCE =  "src/resources/sanat.txt"
 ui = UI(path = RESOURCE)
-ui.display_menu()
+ui.displayMenu()

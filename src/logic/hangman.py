@@ -51,6 +51,12 @@ class Hangman:
                     results[letter] += 1
         return max(results.items(), key=operator.itemgetter(1))[0]
     def miss(self, letter):
+        """
+        note that a letter did not fit the word
+        """
         self.missed+=letter
     def reset(self):
+        """
+        clear missed letters
+        """
         self.missed = ""
