@@ -8,7 +8,7 @@ class Reader:
     def __init__(self):
         pass
 
-    def read_from_file(self, path_to_file):
+    def readFromFile(self, path_to_file):
         """
         get data from file
         """
@@ -17,7 +17,7 @@ class Reader:
         for i in words:
             word_list.append(str(i)[:-1].lower())
         return set(word_list)
-    def write_to_file(self, path_to_file, word):
+    def writeToFile(self, path_to_file, word):
         """
         write a new word to a file
         """

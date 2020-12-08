@@ -10,7 +10,7 @@ class WordSnack:
     """
     def __init__(self, words):
         self.words = words
-    def find_words(self, letters):
+    def findWords(self, letters):
         """
         get possible words from letters
         """

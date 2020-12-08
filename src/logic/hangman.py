@@ -13,7 +13,7 @@ class Hangman:
         self.words = words
         self.alphabet = set([c for word in words for c in word if c is not " "])
         self.missed=""
-    def find_words(self, lenght, current=""):
+    def findWords(self, lenght, current=""):
         """
         select correct length words
         """

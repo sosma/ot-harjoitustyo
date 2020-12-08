@@ -13,9 +13,10 @@ ohjelman käynnistys
 ```
 python3 -m pipenv run start
 ```
+
+# tietokannanvalinta
 ohjelmassa valitaan aluksi mitä tietokantaa käytetään tekstipohjaisella käyttöliittymällä. käyttäjä voi valita joko "src/resources/sanat.txt" joka sisältää suomenkieliset sanat tai "src/resources/words.txt" joka sisältää englanninkieliset sanat. käyttäjä voi myös käyttää mitä tahansa haluamaansa sanastoa, missä on yksi sana per rivi, tällöin kirjoitat tähän vaan polun sanatiedostoosi.
 
-tämän jälkeen käyttäjä voi halutessaan lisää tietokantaan yhden sanan, jos huomaa siellä puutoksen, jos ei halua lisätä sanoja, painetaan vain enter
 
 tämän jälkeen päästään graafiseen käyttöliittymään.
 
@@ -27,6 +28,9 @@ kun painaa mistä vain kohtaa näytöltä ja alkaa kirjoittamaan tulee kirjoitet
 
 # hirsipuu näkymä
 hirsipuu näkymässä aloitetaan kirjoittamalla sanassa olevien kirjainten määrä. Tämän jälkeen painamalla enter näppäintä ohjelma arvaa sanalle kirjaimen. Sitten käyttäjä painaa niistä kohdista johoin kirjain kuuluu jolloin ne korvaantuu arvatulla merkillä. Jos kirjain ei ole sanassa tai käyttäjä on painanut jo kaikki siihen menevät kirjaimet tulee käyttäjän painaa uudestaan enter näppäintä päästäkseen eteenpäin
+
+# sanan lisäys näkymä
+jos huomaat että tietokannasta puuttuu jokin sana jota haluat käyttää, mene sananlisäysnäkymään, kirjoita haluamasi sana siten että se näkyy näytöllä ja paina enter näppäintä, niin sana päivittyy tietokantaan
 
 ohjelman testaus
 ```
