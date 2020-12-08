@@ -18,7 +18,15 @@ ohjelmassa valitaan aluksi mitä tietokantaa käytetään tekstipohjaisella käy
 tämän jälkeen käyttäjä voi halutessaan lisää tietokantaan yhden sanan, jos huomaa siellä puutoksen, jos ei halua lisätä sanoja, painetaan vain enter
 
 tämän jälkeen päästään graafiseen käyttöliittymään.
-ohjelmasta pääsee koittamaan sanojenhakuohjelmaa painamalla word snack nappia. tämän jälkeen kun painaa näytöltä ja alkaa kirjoittamaan tulee kirjoitettu merkkijono näytölle. Kun on kirjoittanut haluamansa kirjaimet näytölle, painamalla enter näppäintä hakee ohjelma sanat. Uuden merkkijonon kirjoittamisen voi aloittaa painamalla hiirellä näytöstä. Vasemmassa yläkulmassa olevasta napista pääsee takaisin menu näkemään. Jos yrittää hakea yli kuudella kirjaimella merkkijonoja, voi suoritusaika olla todella pitkä, meidän onneksi sanapala-peliä varten ei tarvitse hakea tätä pidempiä merkkijonoja
+
+# menu
+ohjelman menusta pääsee joko sanapala tai hirsipuu ohjelmaan painaan niihin viittaavaa nappia. quit napilla pääsee pois ohjelmasta.
+
+# sanapala näkymä
+kun painaa mistä vain kohtaa näytöltä ja alkaa kirjoittamaan tulee kirjoitettu merkkijono näytölle. Kun on kirjoittanut haluamansa kirjaimet näytölle, painamalla enter näppäintä hakee ohjelma sanat. Uuden merkkijonon kirjoittamisen voi aloittaa painamalla hiirellä mistä tahansa kohtaa näytöllä. Vasemmassa yläkulmassa olevasta napista pääsee takaisin menu näkemään. Jos yrittää hakea yli kuudella kirjaimella merkkijonoja, voi suoritusaika olla todella pitkä, meidän onneksi sanapala-peliä varten ei tarvitse hakea tätä pidempiä merkkijonoja
+
+# hirsipuu näkymä
+hirsipuu näkymässä aloitetaan kirjoittamalla sanassa olevien kirjainten määrä. Tämän jälkeen painamalla enter näppäintä ohjelma arvaa sanalle kirjaimen. Sitten käyttäjä painaa niistä kohdista johoin kirjain kuuluu jolloin ne korvaantuu arvatulla merkillä. Jos kirjain ei ole sanassa tai käyttäjä on painanut jo kaikki siihen menevät kirjaimet tulee käyttäjän painaa uudestaan enter näppäintä päästäkseen eteenpäin
 
 ohjelman testaus
 ```
