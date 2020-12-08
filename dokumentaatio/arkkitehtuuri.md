@@ -1,6 +1,7 @@
 # Arkkitehtuurikuvaus
 
 ## Rakenne
+![alt text](laatikot.jpg)
 ohjelman logiikkamoduulit ovat src/logic alla. datankäsittelymoduulit ovat src/reader alla, kuvat ja tietokannat ovat src/resources alla ja ui on src/ui alla. src/index.py käynnistää ohjelman
 
 ohjelma toimii siten että ui piirtää kaiken ja kutsuu logiikkamoduuleita aina kun pitää päätellä jotain ja ui kutsuu datan hakemismoduuleita ja välittää niiden tiedot logiikkamoduuleille
