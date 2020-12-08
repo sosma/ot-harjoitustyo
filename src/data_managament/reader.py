@@ -16,7 +16,7 @@ class Reader:
         word_list = []
         for i in words:
             word_list.append(str(i)[:-1].lower())
-        return word_list
+        return set(word_list)
     def write_to_file(self, path_to_file, word):
         """
         write a new word to a file
