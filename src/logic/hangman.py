@@ -13,7 +13,7 @@ class Hangman:
     """
     def __init__(self, words):
         self.words = words
-        self.alphabet = set([c for word in words for c in word if c is not " "])
+        self.alphabet = set([c for word in words for c in word if c != " "])
         self.missed=""
     def findWords(self, lenght, current=""):
         """
