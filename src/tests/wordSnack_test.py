@@ -1,7 +1,7 @@
 # pylint: skip-file
 import unittest
-from reader import Reader
-from word_snack import WordSnack
+from reader.reader import Reader
+from logic.wordSnack import WordSnack
 
 
 class TestWordSnack(unittest.TestCase):

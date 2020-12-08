@@ -8,18 +8,18 @@ class Reader:
     def __init__(self):
         pass
 
-    def readFromFile(self, path_to_file):
+    def readFromFile(self, pathToFile):
         """
         get data from file
         """
-        words = open(path_to_file, "r")
-        word_list = []
+        words = open(pathToFile, "r")
+        wordList = []
         for i in words:
-            word_list.append(str(i)[:-1].lower())
-        return set(word_list)
-    def writeToFile(self, path_to_file, word):
+            wordList.append(str(i)[:-1].lower())
+        return set(wordList)
+    def writeToFile(self, pathToFile, word):
         """
         write a new word to a file
         """
-        with open(path_to_file, 'a') as source:
+        with open(pathToFile, 'a') as source:
             source.write(word+"\n")

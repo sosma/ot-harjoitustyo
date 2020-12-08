@@ -10,14 +10,23 @@ Ohjelman päänäyttö sisältää päällekkäin valikot mistä voi valita joko
 
 ohelma sisältää molemmille peleille oman käyttöliittymän. Hirsipuussa tulee viivat joiden päälle ilmestyy oikeat kirjaimet ja kuva puusta, sanapalassa eritellään eri pituiset sanat otsikoiden alle
 
+ohjelma sisältää lisäksi käytössä olevaan tietokantaan sanojen lisäyksen
+
 
 * pääkäyttöliittymä
 * sanapala käyttöliittymä tehty
+* hirsipuu käyttöliittymä tehty
+* sanojenlisäys käyttöliittymä tehty
+
+## käyttöliittymäluonnos
+
+![alt text](kayttoliittuma.jpg)
+
 
 ## Käyttäjät
 
-Ohjelmalla on vain yksi käyttäjä, eikä siinä ole
-* kirjautumistoiminto tehty
+Ohjelmalla on vain yksi käyttäjä, eikä siinä ole kirjautumistoiminto
+* tehty
 
 
 ## Perusversion tarjoama toiminnallisuus
@@ -26,7 +35,10 @@ Toiminnallisuus riippuu siitä, millaista peliä pelataan. Jos pelaaja pelaa esi
 
 
 * sanapala toiminnallisuus tehty
+* hirsipuu toiminnallisuus tehty
+* sanastojen lataus tehty
 
 ## jatkokehitysideoita
 
-ohjelmaan voi lisätä myös muita sanapelejä kuin tarjotut kaksi, jos vaikka jokin uusi hitti sanapeli ilmestyy mobiilille
+* ohjelmaan voi lisätä myös muita sanapelejä kuin tarjotut kaksi, jos vaikka jokin uusi hitti sanapeli ilmestyy mobiilille
+* ohjelmaan voi lisätä sql tai verkkopohjaisia tietokantoja

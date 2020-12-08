@@ -1,6 +1,7 @@
+"""
+starts the word helper program
+"""
 from ui.ui import UI
-from logic.hangman import Hangman
-from reader.reader import Reader
 
 RESOURCE = ""
 RESOURCE = input("please give the resource file you wish to use:" +\

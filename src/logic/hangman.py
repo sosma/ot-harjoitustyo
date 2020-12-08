@@ -1,4 +1,6 @@
-from random import choice
+"""
+Hangman logic engine
+"""
 import re
 import operator
 

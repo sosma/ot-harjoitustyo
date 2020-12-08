@@ -3,7 +3,7 @@
 import pygame
 import sys
 import re
-from logic.word_snack import WordSnack
+from logic.wordSnack import WordSnack
 from logic.hangman import Hangman
 from reader.reader import Reader
 
@@ -15,6 +15,12 @@ class UI:
         self.color = (255,0,0)
         self.colorLight = (170,170,170)
         self.colorDark = (100,100,100)
+        reader = Reader()
+        try:
+            reader.readFromFile(path)
+        except:
+            print("invalid database")
+            quit()
     def displayButton(self, position, size, renderObject, screen, mouse):
         if position[0] <= mouse[0] <= position[0]+size[0] and position[1] <= mouse[1] <= position[1] + size[1]:
             pygame.draw.rect(screen,self.colorLight,[position[0],position[1],size[0],size[1]])
@@ -153,7 +159,8 @@ class UI:
                     elif event.key == pygame.K_BACKSPACE:
                         text =  text[:-1]
                     else:
-                        text += pygame.key.name(event.key)
+                        if len(pygame.key.name(event.key)) == 1:
+                            text += pygame.key.name(event.key)
             mouse = pygame.mouse.get_pos()
 
             screen.fill(0)

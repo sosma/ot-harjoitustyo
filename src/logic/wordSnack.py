@@ -1,9 +1,10 @@
+
+"""
+word snack logic engine
+"""
 import itertools
 # -*- coding: utf-8 -*-
 
-"""
-Class for solving word snack problems
-"""
 class WordSnack:
     """
     word snack main class

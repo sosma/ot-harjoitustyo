@@ -3,4 +3,5 @@
 24.11.2020: 6h. käyttöliittymän ohjelmointia ja dokumentointia
 1.12.2020: 2h. Dokumentointia ja tulevan ihmettelyä
 1.12.2020: 1h. Sanaston valinta ja sanojne lisäys toimintojen toteutus
-yhteensä 12h
+8.12.2020 10h. Hirsipuu toiminnallisuuden toteutus, dokumentoinnin kirjoittaminen, koodin siistiminenn
+yhteensä 22h

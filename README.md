@@ -1,40 +1,43 @@
 <h1>Sana peli apustaja ohjelma</h1>
 
-## Ohjelman alustus
-pipenv asentaa tällä tarvittavat kirjastot, tämä pitää ajaa vain kerran
+Ohjelman avulla on mahdollista saada nopeasti apua hirsipuu ja sanapala pelien voittamiseen. Ohjelmaan voi käyttää millä tahansa kielellä jolle käyttäjällä on tietokanta, mutta mukana tulee suomen ja englanninkieliset versiot
+
+## Python versio
+Ohjelma toimii ainakin 3.6.10 ja sitä uudemmilla python versiolla
+
+## Käyttöliittymät
+Ohjelmaa on testattu vain linux käyttöliittymällä
+
+## Asennus
+
+asenna riippuvuudet  komennolla
 ```
 python3 -m pipenv install
 ```
 
-
-## Käyttöohjeet
-
-ohjelman käynnistys
+käynnistä ohjelma ajamalla
 ```
 python3 -m pipenv run start
 ```
 
-# tietokannanvalinta
-ohjelmassa valitaan aluksi mitä tietokantaa käytetään tekstipohjaisella käyttöliittymällä. käyttäjä voi valita joko "src/resources/sanat.txt" joka sisältää suomenkieliset sanat tai "src/resources/words.txt" joka sisältää englanninkieliset sanat. käyttäjä voi myös käyttää mitä tahansa haluamaansa sanastoa, missä on yksi sana per rivi, tällöin kirjoitat tähän vaan polun sanatiedostoosi.
+## Komentorivitoiminnot
 
-
-tämän jälkeen päästään graafiseen käyttöliittymään.
-
-# menu
-ohjelman menusta pääsee joko sanapala tai hirsipuu ohjelmaan painaan niihin viittaavaa nappia. quit napilla pääsee pois ohjelmasta.
-
-# sanapala näkymä
-kun painaa mistä vain kohtaa näytöltä ja alkaa kirjoittamaan tulee kirjoitettu merkkijono näytölle. Kun on kirjoittanut haluamansa kirjaimet näytölle, painamalla enter näppäintä hakee ohjelma sanat. Uuden merkkijonon kirjoittamisen voi aloittaa painamalla hiirellä mistä tahansa kohtaa näytöllä. Vasemmassa yläkulmassa olevasta napista pääsee takaisin menu näkemään. Jos yrittää hakea yli kuudella kirjaimella merkkijonoja, voi suoritusaika olla todella pitkä, meidän onneksi sanapala-peliä varten ei tarvitse hakea tätä pidempiä merkkijonoja
-
-# hirsipuu näkymä
-hirsipuu näkymässä aloitetaan kirjoittamalla sanassa olevien kirjainten määrä. Tämän jälkeen painamalla enter näppäintä ohjelma arvaa sanalle kirjaimen. Sitten käyttäjä painaa niistä kohdista johoin kirjain kuuluu jolloin ne korvaantuu arvatulla merkillä. Jos kirjain ei ole sanassa tai käyttäjä on painanut jo kaikki siihen menevät kirjaimet tulee käyttäjän painaa uudestaan enter näppäintä päästäkseen eteenpäin
-
-# sanan lisäys näkymä
-jos huomaat että tietokannasta puuttuu jokin sana jota haluat käyttää, mene sananlisäysnäkymään, kirjoita haluamasi sana siten että se näkyy näytöllä ja paina enter näppäintä, niin sana päivittyy tietokantaan
-
-ohjelman testaus
+ ohjelman ajtetaan komennolla
+```
+python3 -m pipenv run start
+```
+ohjelman testataan komennolla
 ```
 python3 -m pipenv run test
+```
+
+testikattavuus saadaan komennolla
+```
+python3 -m pipenv run coverage
+```
+tämän jälkeen raportin voi generoida komennolla
+```
+python3 -m pipenv run coverage-report
 ```
 
 ohjelman koodin laadun tarkastus
@@ -42,9 +45,14 @@ ohjelman koodin laadun tarkastus
 python3 -m pipenv run lint
 ```
 
-## Kurssiprojekti
-[määrittelydokumentti](dokumentaatio/maaritteludokumentti.md)
+## dokumentaatio
+
+[käyttöohje](dokumentaatio/kayttoohje.md)
 
 [arkkitehtuuri](dokumentaatio/arkkitehtuuri.md)
+
+[määrittelydokumentti](dokumentaatio/maaritteludokumentti.md)
+
+[testausdokumentti](dokumentaatio/testausdokumentti.md)
 
 [tuntikirjanpito](dokumentaatio/tuntikirjanpito.txt)

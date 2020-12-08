@@ -1,6 +1,6 @@
 # pylint: skip-file
 import unittest
-from reader import Reader
+from reader.reader import Reader
 
 
 class TestReader(unittest.TestCase):
